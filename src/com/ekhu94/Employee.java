@@ -14,6 +14,9 @@ public class Employee {
     }
 
     public void setBaseSalary(int baseSalary) {
+        if (baseSalary <= 0) {
+            throw new IllegalArgumentException("Salary must be greater than 0");
+        }
         this.baseSalary = baseSalary;
     }
 
@@ -22,6 +25,9 @@ public class Employee {
     }
 
     public void setHourlyRate(int hourlyRate) {
+        if (hourlyRate <= 0) {
+            throw new IllegalArgumentException("Hourly rate must be greater than 0");
+        }
         this.hourlyRate = hourlyRate;
     }
 
