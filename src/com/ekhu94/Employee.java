@@ -9,8 +9,16 @@ public class Employee {
         setHourlyRate(hourlyRate);
     }
 
+    public Employee(int baseSalary) {
+        this(baseSalary, 0);
+    }
+
     public int calculateWage(int extraHours) {
         return baseSalary + (hourlyRate * extraHours);
+    }
+
+    public int calculateWage() {
+        return calculateWage(0);
     }
 
     private int getBaseSalary() {
